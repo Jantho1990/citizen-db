@@ -8,7 +8,8 @@ export const dataViewReducer = (state = [], action) => {
                 {
                     id: uuidv1(),
                     dataKey: action.dataKey,
-                    dataValue: action.dataValue
+                    dataValue: action.dataValue,
+                    editMode: false
                 }
             ]
         default:
