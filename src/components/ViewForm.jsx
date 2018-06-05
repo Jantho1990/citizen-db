@@ -7,11 +7,8 @@ class ViewForm extends Component {
         return {}
     }
     submitData (e) {
-        console.log(e.key)
         switch(e.key) {
             case 'Enter':
-                console.log('wut', this)
-                console.log('boing', this.reduxAction)
                 e.preventDefault()
                 let {dispatch} = this.props
                 dispatch(this.reduxAction())

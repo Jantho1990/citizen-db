@@ -8,8 +8,8 @@ class DataViewForm extends ViewForm {
     reduxAction () {
         return {
             type: 'SUBMIT_DATA',
-            'dataKey': this.refs.dataKey,
-            'dataValue': this.refs.dataValue
+            'dataKey': this.refs.dataKey.value,
+            'dataValue': this.refs.dataValue.value
         }
     }
     render () {
