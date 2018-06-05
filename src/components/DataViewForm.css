@@ -1,2 +1,3 @@
-body {
-  background: #8a0f0f; }
+.data-view-form[data-edit-mode="false"] input {
+  border: none;
+  background: transparent; }

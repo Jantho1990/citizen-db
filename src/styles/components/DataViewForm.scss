@@ -1,3 +1,8 @@
-body {
-    background: hsl(0, 80%, 30%);
+.data-view-form {
+    &[data-edit-mode="false"] {
+        input {
+            border: none;
+            background: transparent;
+        }
+    }
 }
