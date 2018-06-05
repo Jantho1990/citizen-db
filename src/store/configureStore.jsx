@@ -1,12 +1,12 @@
 import { compose, combineReducers, createStore } from 'redux'
 
 import {
-    submitDataReducer as submitData
+    dataViewReducer as dataViews
 } from './../reducers/reducers'
 
 export const configure = (initialState = {}) => {
     const reducer = combineReducers({
-        submitData
+        dataViews
     })
 
     const store = createStore(reducer, initialState, compose(

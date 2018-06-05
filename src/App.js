@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
 
-import DataViewForm from './components/DataViewForm'
+import UserViewData from './components/UserViewData'
 import { configure } from './store/configureStore'
 const store = configure()
 
@@ -19,7 +19,7 @@ class App extends Component {
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
-          <DataViewForm></DataViewForm>
+          <UserViewData></UserViewData>
         </div>
       </Provider>
     );

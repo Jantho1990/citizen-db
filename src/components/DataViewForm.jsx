@@ -25,8 +25,8 @@ class DataViewForm extends ViewForm {
         } = this.props
         return (
             <div className="data-view-form" data-edit-mode={this.editMode} onKeyPress={(e) => this.handleSubmit(e)}>
-                <input ref="dataKey" type="text" data-edit-mode={this.editMode}/>
-                <input ref="dataValue" type="text" data-edit-mode={this.editMode}/>
+                <input ref="dataKey" type="text" defaultValue={dataKey} data-edit-mode={this.editMode}/>
+                <input ref="dataValue" type="text" defaultValue={dataValue} data-edit-mode={this.editMode}/>
             </div>
         )
     }
