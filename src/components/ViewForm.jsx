@@ -6,12 +6,13 @@ class ViewForm extends Component {
         // extending the ViewForm.
         return {}
     }
-    submitData (e) {
+    submitData (e, callback) {
         switch(e.key) {
             case 'Enter':
                 e.preventDefault()
                 let {dispatch} = this.props
                 dispatch(this.reduxAction())
+                callback()
                 break
             default:
                 break

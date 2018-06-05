@@ -5,6 +5,13 @@ import { connect } from 'react-redux'
 import actions from './../actions/actions'
 
 class DataViewForm extends ViewForm {
+    handleSubmit (e) {
+        this.submitData(e, () => {
+            this.refs.dataKey.value = ''
+            this.refs.dataValue.value = ''
+            this.refs.dataKey.focus()
+        })
+    }
     reduxAction () {
         return {
             type: 'SUBMIT_DATA',
@@ -17,7 +24,7 @@ class DataViewForm extends ViewForm {
             id, dataKey, dataValue, editMode
         } = this.props
         return (
-            <div className="data-view-form" data-edit-mode={this.editMode} onKeyPress={(e) => this.submitData(e)}>
+            <div className="data-view-form" data-edit-mode={this.editMode} onKeyPress={(e) => this.handleSubmit(e)}>
                 <input ref="dataKey" type="text" data-edit-mode={this.editMode}/>
                 <input ref="dataValue" type="text" data-edit-mode={this.editMode}/>
             </div>
